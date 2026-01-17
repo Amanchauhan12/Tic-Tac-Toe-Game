@@ -6,6 +6,8 @@ let msg = document.querySelector("#msg");
 
 let turnO = true; //playerX, playerO
 let count = 0; //To Track Draw
+let items = document.querySelectorAll("X");
+
 
 const winPatterns = [
   [0, 1, 2],
@@ -30,10 +32,12 @@ boxes.forEach((box) => {
     if (turnO) {
       //playerO
       box.innerText = "O";
+      box.style.color="blue";
       turnO = false;
     } else {
       //playerX
       box.innerText = "X";
+      box.style.color="red";
       turnO = true;
     }
     box.disabled = true;
